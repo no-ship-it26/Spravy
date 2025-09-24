@@ -2,11 +2,12 @@
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Počasie</title>
   <style>
     body {
       margin: 0;
-      padding: 30px 15px;
+      padding: 20px 12px;
       background-color: #7bb3ff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
@@ -14,32 +15,32 @@
     }
 
     .emoji {
-      font-size: 80px;
+      font-size: 70px;
       margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 42px;
-      margin: 10px 0 30px;
+      font-size: 34px;
+      margin: 10px 0 25px;
       color: #043354;
     }
 
     .button-container {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 14px;
       max-width: 500px;
-      margin: 0 auto 40px auto;
+      margin: 0 auto 30px auto;
     }
 
     .weather-button {
-      padding: 12px;
-      font-size: 16px;
+      padding: 16px;
+      font-size: 18px;
       font-weight: bold;
       background-color: #0d3f6a;
       border: none;
       color: white;
-      border-radius: 6px;
+      border-radius: 10px;
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.2s ease, transform 0.2s ease;
@@ -47,16 +48,16 @@
 
     .weather-button:hover {
       background-color: #16588f;
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
 
     .weather-button:active {
-      transform: scale(0.98);
+      transform: scale(0.97);
     }
 
     .map-frame {
       width: 100%;
-      height: 500px;
+      height: 60vh; /* výška relatívna k obrazovke */
       border: none;
       border-radius: 15px;
       overflow: hidden;
@@ -64,7 +65,6 @@
       margin: 0 auto;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-
   </style>
 </head>
 <body>
@@ -74,19 +74,19 @@
   <h1>Počasie</h1>
 
   <div class="button-container">
-    <a href="https://no-ship-it26.github.io/Spravy/spravy_pocasie" class="weather-button" target="_blank">
+    <a href="https://no-ship-it26.github.io/Spravy/spravy_pocasie" class="weather-button">
       Správy o počasí
     </a>
-    <a href="https://www.shmu.sk/popups/meteo/vystrahy.php?region=BA" class="weather-button" target="_blank">
+    <a href="https://www.shmu.sk/popups/meteo/vystrahy.php?region=BA" class="weather-button">
       Meteorologické výstrahy SHMÚ Bratislava
     </a>
-    <a href="https://www.shmu.sk/popups/meteo/vystrahy.php?region=KN" class="weather-button" target="_blank">
+    <a href="https://www.shmu.sk/popups/meteo/vystrahy.php?region=KN" class="weather-button">
       Meteorologické výstrahy SHMÚ Komárno
     </a>
-    <a href="https://www.shmu.sk/" class="weather-button" target="_blank">
+    <a href="https://www.shmu.sk/" class="weather-button">
       SHMÚ.sk
     </a>
-    <a href="https://www.imeteo.sk/" class="weather-button" target="_blank">
+    <a href="https://www.imeteo.sk/" class="weather-button">
       Imeteo.sk
     </a>
   </div>
