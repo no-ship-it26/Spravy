@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <title>Počasie</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 30px 15px;
+      background-color: #7bb3ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: #072c4d;
+    }
+
+    .emoji {
+      font-size: 80px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 10px 0 30px;
+      color: #043354;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 500px;
+      margin: 0 auto 40px auto;
+    }
+
+    .weather-button {
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #0d3f6a;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .weather-button:hover {
+      background-color: #16588f;
+      transform: scale(1.02);
+    }
+
+    .weather-button:active {
+      transform: scale(0.98);
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="emoji">🌦️</div>
+
+  <h1>Počasie</h1>
+
+  <div class="button-container">
+    <a href="https://sites.google.com/view/sprvy-a-poasie/pocasie/spravy-pocasie" class="weather-button" target="_blank">
+      Správy o počasí
+    </a>
+    <a href="https://www.shmu.sk/popups/meteo/vystrahy.php?region=BA" class="weather-button" target="_blank">
+      Meteorologické výstrahy SHMÚ Bratislava
+    </a>
+    <a href="https://www.shmu.sk/popups/meteo/vystrahy.php?region=KN" class="weather-button" target="_blank">
+      Meteorologické výstrahy SHMÚ Komárno
+    </a>
+    <a href="https://www.shmu.sk/" class="weather-button" target="_blank">
+      SHMÚ.sk
+    </a>
+    <a href="https://www.imeteo.sk/" class="weather-button" target="_blank">
+      Imeteo.sk
+    </a>
+  </div>
+
+  <div class="map-frame">
+    <iframe src="https://www.imeteo.sk/iframe/pocasie"
+            style="border-radius: 15px; width: 100%; height: 100%;"
+            frameborder="0"
+            scrolling="no">
+    </iframe>
+  </div>
+
+</body>
+</html>
