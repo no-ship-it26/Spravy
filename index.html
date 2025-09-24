@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <title>Spravodajské weby</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #1a1818;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      color: #eee;
+    }
+
+    .emoji {
+      font-size: 120px;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 40px;    /* väčší */
+      font-weight: bold;  /* tučný */
+      color: #eee;
+    }
+
+    h2 {
+      margin: 50px 0 25px;
+      font-size: 26px;    /* väčší */
+      font-weight: bold;  /* tučný */
+      color: #ccc;
+      border-bottom: 2px solid #333;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .fancy-button {
+      flex: 1 1 230px;
+      padding: 18px;
+      font-size: 20px;      /* väčší text */
+      font-weight: bold;    /* tučný text */
+      background-color: #3ad07b;
+      color: black;
+      text-decoration: none;
+      border: none;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+      transition: all 0.25s ease;
+    }
+
+    .fancy-button:hover {
+      background-color: #2fa766;
+      color: #fff;
+      box-shadow: 0 0 14px rgba(58, 208, 123, 0.6);
+      transform: scale(1.04);
+    }
+
+    .fancy-button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+
+  <h1><span class="emoji">📰</span><br>Spravodajské portály</h1>
+  <div class="button-container">
+    <a class="fancy-button" href="https://ereport.sk/">📰Správy</a>
+    <a class="fancy-button" href="https://tvnoviny.sk/">⚽Šport</a>
+    <a class="fancy-button" href="https://www.teraz.sk/">🌦️Počasie</a>
+    <a class="fancy-button" href="https://spravy.rtvs.sk/">🌍Spravodajské weby</a>
+  </div>
+
+</body>
+</html>
