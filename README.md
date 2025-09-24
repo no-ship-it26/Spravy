@@ -1,0 +1,2 @@
+# Spravy
+SK spravy
