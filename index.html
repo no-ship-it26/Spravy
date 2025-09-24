@@ -2,6 +2,7 @@
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Správy SK</title>
   <style>
     body {
@@ -14,47 +15,34 @@
     }
 
     .emoji {
-      font-size: 120px;
+      font-size: 100px;
       display: block;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     h1 {
-      margin-bottom: 20px;
-      font-size: 40px;    /* väčší */
-      font-weight: bold;  /* tučný */
+      margin-bottom: 30px;
+      font-size: 34px;
+      font-weight: bold;
       color: #eee;
-    }
-
-    h2 {
-      margin: 50px 0 25px;
-      font-size: 26px;    /* väčší */
-      font-weight: bold;  /* tučný */
-      color: #ccc;
-      border-bottom: 2px solid #333;
-      display: inline-block;
-      padding-bottom: 6px;
     }
 
     .button-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-      max-width: 1000px;
+      flex-direction: column; /* tlačidlá pod sebou */
+      gap: 16px;
+      max-width: 400px;
       margin: 0 auto;
     }
 
     .fancy-button {
-      flex: 1 1 230px;
-      padding: 18px;
-      font-size: 20px;      /* väčší text */
-      font-weight: bold;    /* tučný text */
+      padding: 20px;
+      font-size: 22px;      /* väčší text pre mobil */
+      font-weight: bold;
       background-color: #3ad07b;
       color: black;
       text-decoration: none;
-      border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       text-align: center;
       box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
       transition: all 0.25s ease;
@@ -63,8 +51,7 @@
     .fancy-button:hover {
       background-color: #2fa766;
       color: #fff;
-      box-shadow: 0 0 14px rgba(58, 208, 123, 0.6);
-      transform: scale(1.04);
+      transform: scale(1.03);
     }
 
     .fancy-button:active {
@@ -76,10 +63,10 @@
 
   <h1><span class="emoji">📰</span><br>Správy SK</h1>
   <div class="button-container">
-    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/news">📰Správy</a>
-    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/sport">⚽Šport</a>
-    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/pocasie">🌦️Počasie</a>
-    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/zoznam_spravodajskych_webov">🌍Spravodajské weby</a>
+    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/news">📰 Správy</a>
+    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/sport">⚽ Šport</a>
+    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/pocasie">🌦️ Počasie</a>
+    <a class="fancy-button" href="https://no-ship-it26.github.io/Spravy/zoznam_spravodajskych_webov">🌍 Spravodajské weby</a>
   </div>
 
 </body>
