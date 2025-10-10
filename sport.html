@@ -161,7 +161,7 @@
 
   async function fetchXMLFeed(url){
     try{
-      const res = await fetch("https://corsproxy.io/?"+encodeURIComponent(url));
+      const res = await fetch("https://corsproxy.io/?" + encodeURIComponent(url));
       const text = await res.text();
       const xml = new DOMParser().parseFromString(text,"text/xml");
       const channel = xml.querySelector("channel");
@@ -196,10 +196,20 @@
           }
         }
 
+        // --- vylepšený úryvok ---
+        let rawDesc = item.querySelector("description")?.textContent || "";
+        rawDesc = rawDesc.replace(/<[^>]*>/g, "").trim();
+
+        const descLimit = 240; // raz toľko ako pôvodne
+        let shortDesc = rawDesc.slice(0, descLimit);
+        if (rawDesc.length > descLimit) {
+          shortDesc = shortDesc.slice(0, shortDesc.lastIndexOf(" "));
+        }
+
         return {
           title: item.querySelector("title")?.textContent||"",
           link: item.querySelector("link")?.textContent||"",
-          desc: (item.querySelector("description")?.textContent||"").replace(/<[^>]*>/g,"").trim().slice(0,120),
+          desc: shortDesc,
           pubDate: pub,
           source,
           thumb,
@@ -278,7 +288,7 @@
       } else {
         const end = document.createElement("div");
         end.className = "message-box error-msg";
-        end.textContent = "✅ Načítali sa všetky články";
+        end.textContent = "❌Chyba";
         container.appendChild(end);
       }
     }, 300);
